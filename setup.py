@@ -65,8 +65,8 @@ setuptools.setup(
         'pygame',
         'rx',
         'tensorflow-macos' if IS_M1_MAC else 'tensorflow',
-    ],
-    extras_require={
+    #],
+    #extras_require={
         # Dependencies required for rllib example.
         'rllib': [
             'dm-tree',
