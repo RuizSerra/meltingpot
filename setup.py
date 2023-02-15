@@ -65,24 +65,37 @@ setuptools.setup(
         'pygame',
         'rx',
         'tensorflow-macos' if IS_M1_MAC else 'tensorflow',
+        'rllib',
+        'dm-tree',
+        'gym',
+        'ray[rllib,default]==2.0.0',
+        'numpy<1.23',  # Needed by Ray because it uses `np.bool`.
+        'pettingzoo',
+        'dm-tree',
+        'gym',
+        'matplotlib',
+        'pettingzoo>=1.18.0',
+        'stable-baselines3',
+        'supersuit>=3.3.0',
+        'torch',
     ],
-    extras_require={
-        # Dependencies required for rllib example.
-        'rllib': [
-            'dm-tree',
-            'gym',
-            'ray[rllib,default]==2.0.0',
-            'numpy<1.23',  # Needed by Ray because it uses `np.bool`.
-        ],
-        # Dependencies required for pettingzoo example.
-        'pettingzoo': [
-            'dm-tree',
-            'gym',
-            'matplotlib',
-            'pettingzoo>=1.18.0',
-            'stable-baselines3',
-            'supersuit>=3.3.0',
-            'torch',
-        ],
-    },
+#     extras_require={
+#         # Dependencies required for rllib example.
+#         'rllib': [
+#             'dm-tree',
+#             'gym',
+#             'ray[rllib,default]==2.0.0',
+#             'numpy<1.23',  # Needed by Ray because it uses `np.bool`.
+#         ],
+#         # Dependencies required for pettingzoo example.
+#         'pettingzoo': [
+#             'dm-tree',
+#             'gym',
+#             'matplotlib',
+#             'pettingzoo>=1.18.0',
+#             'stable-baselines3',
+#             'supersuit>=3.3.0',
+#             'torch',
+#         ],
+#     },
 )
