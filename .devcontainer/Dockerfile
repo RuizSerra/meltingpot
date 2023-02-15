@@ -29,8 +29,6 @@ RUN pip install \
   pylance \
   toml \
   yapf
-  
-RUN pip install --upgrade setuptools
 
 # Install lab2d (appropriate version for architecture)
 RUN if [ "$(uname -m)" != 'x86_64' ]; then \
